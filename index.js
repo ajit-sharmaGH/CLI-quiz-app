@@ -5,12 +5,12 @@ console.log(`Hey ${username} Get ready to place the quiz!\n`)
 
 let score = 0;
 
-function play(question, ans){
+function play(question, ans) {
   let answer = readlineSync.question(`${question} \n`)
-  if(answer === ans){
+  if (answer === ans) {
     score = score + 1;
     console.log("Your answer is correct \n")
-  } else{
+  } else {
     console.log(`Oops, the answer you told is incorrect. \nCorrect is answer is ${ans}`)
   }
 }
@@ -38,11 +38,11 @@ const questions = [
   },
   {
     "question": "What is the name of my girlfriend?",
-    "answer": "doesn't exist"
+    "answer": ">>doesn't exist"
   },
 ]
 
-for(let i = 0; i < questions.length; i++){
-   play(questions[i].question, questions[i].answer)
+for (let i = 0; i < questions.length; i++) {
+  play(questions[i].question, questions[i].answer)
 }
-console.log(`You are awesome because your FINAL Score is : ${score} `)
+console.log(`You are awesome thanks for knowing me so well, FINAL Score is : ${score} `)
